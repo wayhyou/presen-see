@@ -22,4 +22,9 @@ class Attendance extends Model
     {
         return $this->belongsTo(Employee::class);
     }
+
+    public function scopeToday($query)
+    {
+        return $query->whereDate('created_at', now()->toDateString());
+    }
 }
