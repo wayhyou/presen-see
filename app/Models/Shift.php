@@ -10,7 +10,6 @@ class Shift extends Model
     use HasFactory;
 
     protected $fillable = [
-        'office_id',
         'name',
         'start_time',
         'end_time',
@@ -19,7 +18,7 @@ class Shift extends Model
 
     public function office()
     {
-        return $this->belongsTo(Office::class);
+        return $this->hasMany(Office::class);
     }
 
     public function employees()

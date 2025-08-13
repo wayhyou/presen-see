@@ -15,7 +15,10 @@ class Attendance extends Model
         'check_in',
         'check_out',
         'status',
-        'notes',
+        'check_in_latitude',
+        'check_in_longitude',
+        'check_out_latitude',
+        'check_out_longitude',
     ];
 
     public function employee()

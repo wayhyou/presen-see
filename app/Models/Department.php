@@ -10,13 +10,12 @@ class Department extends Model
     use HasFactory;
 
     protected $fillable = [
-        'office_id',
         'name',
     ];
 
     public function office()
     {
-        return $this->belongsTo(Office::class);
+        return $this->hasMany(Office::class);
     }
 
     public function employees()
