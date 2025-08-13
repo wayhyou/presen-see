@@ -18,6 +18,8 @@ class DatabaseSeeder extends Seeder
             ShiftSeeder::class,
             AdminSeeder::class,
             EmployeeSeeder::class,
+            AttendanceSeeder::class,
+            LeaveRequestSeeder::class,
         ]);
     }
 }

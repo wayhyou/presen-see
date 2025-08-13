@@ -13,7 +13,6 @@ class DepartmentSeeder extends Seeder
      */
     public function run(): void
     {
-        $offices = Office::all();
 
         $departments = [
             'HRD',
@@ -23,13 +22,11 @@ class DepartmentSeeder extends Seeder
             'Customer Service',
         ];
 
-        foreach ($offices as $office) {
-            foreach ($departments as $deptName) {
-                Department::firstOrCreate([
-                    'office_id' => $office->id,
-                    'name'      => $deptName,
-                ]);
-            }
+        foreach ($departments as $deptName) {
+            Department::firstOrCreate([
+                'name'      => $deptName,
+            ]);
         }
+
     }
 }
